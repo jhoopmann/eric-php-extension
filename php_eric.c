@@ -3,12 +3,12 @@
 #include "php.h"
 
 #include "php_eric.h"
+#include "include/ericapi.h"
 
-
-PHP_FUNCTION(test);
+PHP_FUNCTION(eric_init);
 
 static zend_function_entry eric_functions[] = {
-	PHP_FE(test, NULL)
+	PHP_FE(eric_init, NULL)
     PHP_FE_END
 };
 
@@ -29,7 +29,7 @@ zend_module_entry eric_module_entry = {
 
 ZEND_GET_MODULE(eric);
 
-PHP_FUNCTION(test)
+PHP_FUNCTION(eric_init)
 {
-    php_printf("test\n");
+    
 }

@@ -5,5 +5,5 @@ PHP_ARG_ENABLE(eric,
 if test $PHP_ERIC != "no"; then
     PHP_REQUIRE_CXX()
     PHP_SUBST(ERIC_SHARED_LIBADD)
-    PHP_NEW_EXTENSION(eric, php_eric.c, $ext_shared)
+    PHP_NEW_EXTENSION(eric, php_eric.c lib/ericapi.so, $ext_shared)
 fi
