@@ -1,0 +1,4 @@
+ARG_ENABLE("eric", "Whether to enable the eric extension", "no");
+if (PHP_LYX != "no") {
+    EXTENSION("eric", "eric.c", true);
+}
