@@ -1,13 +1,17 @@
-PHP_ARG_ENABLE(eric,
-    [Whether to enable the "ERiC" extension],
-    [  --enable-eric         Enable "ERiC" extension support])
+PHP_CHECK_LIBRARY(
+	ericapi,
+	EricInitialisiere,
+	[
+		PHP_ADD_LIBRARY_WITH_PATH(ericapi, ./lib, EXTRA_CFLAGS)
+		AC_DEFINE(HAVE_ERICAPILIB, 1, [ ])
+	],[
+		AC_MSG_ERROR([lib error])	
+	],
+	[
+		-L./lib -lm
+	]
+)
 
-if test $PHP_ERIC != "no"; then
-    PHP_REQUIRE_CXX()
+PHP_SUBST(EXTRA_CFLAGS)
 
-	PHP_ADD_LIBRARY_WITH_PATH("ericapi", lib, LIBXYZ_SHARED_LIBADD)
-
-    PHP_SUBST(ERIC_SHARED_LIBADD)
-
-    PHP_NEW_EXTENSION(eric, php_eric.c, $ext_shared)
-fi
+PHP_NEW_EXTENSION(eric, php_eric.c, $ext_shared)
