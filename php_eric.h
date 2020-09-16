@@ -1,8 +1,9 @@
 #ifndef PHP_ERIC_H
 #define PHP_ERIC_H
+#endif
 
 #define PHP_ERIC_VERSION "1.0"
-#define PHP_ERIC_EXTNAME = "eric"
+#define PHP_ERIC_EXTNAME "eric"
 
 #ifdef HAVE_CONFIG_H
 #include "config.h"

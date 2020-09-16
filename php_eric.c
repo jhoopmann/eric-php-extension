@@ -8,16 +8,14 @@
 PHP_FUNCTION(test);
 
 static zend_function_entry eric_functions[] = {
-	PHP_FE(test)
-	{NULL,NULL,NULL}
+	PHP_FE(test, NULL)
+    PHP_FE_END
 };
 
 zend_module_entry eric_module_entry = {
-#if ZEND_MODULE_API_NO >= 20010901
     STANDARD_MODULE_HEADER,
-#endif
-    PHP_ERIC,
-    hello_functions,
+    PHP_ERIC_EXTNAME,
+    eric_functions,
     NULL,
     NULL,
     NULL,
