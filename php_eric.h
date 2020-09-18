@@ -22,3 +22,8 @@ extern zend_module_entry eric_module_entry;
 #ifdef ZTS
 #include "TSRM.h"
 #endif
+
+void *lericapi;
+
+int* (*pEricInitialisiere)(const char*, const char*);
+void* (*pEricBeende)();

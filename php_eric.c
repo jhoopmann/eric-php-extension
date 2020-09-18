@@ -1,22 +1,49 @@
-
-
+#include <dlfcn.h>
 #include "php.h"
 
 #include "php_eric.h"
 #include "include/ericapi.h"
 #include "include/eric_fehlercodes.h"
 
-PHP_FUNCTION(eric_init);
-ZEND_BEGIN_ARG_INFO_EX(arginfo_eric_init, 0, 0, 2)
-    ZEND_ARG_INFO(0, plugin_path)
-    ZEND_ARG_INFO(0, log_path)
-ZEND_END_ARG_INFO()
+PHP_MINIT_FUNCTION(eric)
+{
+    lericapi = dlopen("/home/jhoopmann/projects/eric-php-extension/lib/libericapi.so", RTLD_NOW);
+    if(!lericapi) {
+        printf("cant load lericapi\n");
+        exit(1);
+    }
 
-PHP_FUNCTION(eric_close);
+    pEricInitialisiere = dlsym(lericapi, "EricInitialisiere");
+    pEricBeende = dlsym(lericapi, "EricBeende");
+}
 
+PHP_MSHUTDOWN_FUNCTION(eric)
+{
+    if(lericapi) {
+        dlclose(lericapi);
+    }
+}
+
+PHP_FUNCTION(eric_init)
+{
+    if(pEricInitialisiere(
+            getenv("ERICAPI_LIB_PATH"), 
+            getenv("ERICAPI_LOG_PATH")
+        ) == ERIC_OK
+    )  {
+        RETURN_BOOL(IS_TRUE);
+    }
+}
+
+PHP_FUNCTION(eric_close)
+{
+    if(lericapi) {
+        pEricBeende();
+    }
+}
 
 static zend_function_entry eric_functions[] = {
-	PHP_FE(eric_init, arginfo_eric_init)
+	PHP_FE(eric_init, NULL)
     PHP_FE(eric_close, NULL)
     PHP_FE_END
 };
@@ -25,8 +52,8 @@ zend_module_entry eric_module_entry = {
     STANDARD_MODULE_HEADER,
     PHP_ERIC_EXTNAME,
     eric_functions,
-    NULL,
-    NULL,
+    PHP_MINIT(eric),
+    PHP_MSHUTDOWN(eric),
     NULL,
     NULL,
     NULL,
@@ -38,24 +65,3 @@ zend_module_entry eric_module_entry = {
 
 ZEND_GET_MODULE(eric);
 
-PHP_FUNCTION(eric_init)
-{
-    const char* plugin_path;
-    int plen;
-    const char* log_path;
-    int llen;
-
-    ZEND_PARSE_PARAMETERS_START(2,2)
-        Z_PARAM_STRING(plugin_path, plen);
-        Z_PARAM_STRING(log_path, llen);
-    ZEND_PARSE_PARAMETERS_END();
-
-    if(EricInitialisiere(plugin_path, log_path) == ERIC_OK)  {
-        RETURN_BOOL(IS_TRUE);
-    }
-}
-
-PHP_FUNCTION(eric_close)
-{
-    EricBeende();
-}

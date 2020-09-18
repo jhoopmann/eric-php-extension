@@ -1,0 +1,8 @@
+php_eric.lo: /home/jhoopmann/projects/eric-php-extension/php_eric.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/home/jhoopmann/projects/eric-php-extension $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /home/jhoopmann/projects/eric-php-extension/php_eric.c -o php_eric.lo 
+$(phplibdir)/eric.la: ./eric.la
+	$(LIBTOOL) --mode=install cp ./eric.la $(phplibdir)
+
+./eric.la: $(shared_objects_eric) $(ERIC_SHARED_DEPENDENCIES)
+	$(LIBTOOL) --mode=link $(CC) $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) $(LDFLAGS)  -o $@ -export-dynamic -avoid-version -prefer-pic -module -rpath $(phplibdir) $(EXTRA_LDFLAGS) $(shared_objects_eric) $(ERIC_SHARED_LIBADD)
+

@@ -1,0 +1,36 @@
+2020-09-18 09:31:46,051256[0x000055a8da783c50]  INFO: Die ERiC-Instanz wurde mit der Protokolldatei "/home/jhoopmann/projects/eric-php-extension/eric.log" assoziiert
+2020-09-18 09:31:46,066141[0x000055a8da783c50]  INFO: Callbackmanager initialisiert
+2020-09-18 09:31:46,066341[0x000055a8da783c50]  INFO: ERiC-Instanz "0x55a8da783c50" erzeugt
+2020-09-18 09:31:46,066341[0x000055a8da783c50]  INFO: Version der ERiC Kernbibliotheken: 32, 2, 2, 0
+2020-09-18 09:31:46,066341[0x000055a8da783c50]  INFO: Buildkonfiguration=Release
+2020-09-18 09:31:46,066341[0x000055a8da783c50]  INFO: Zielarchitektur=x86-64
+2020-09-18 09:31:46,066456[0x000055a8da783c50]  INFO: Betabuild=nein
+2020-09-18 09:31:46,075071[0x000055a8da783c50]  INFO: PID=62208
+2020-09-18 09:31:46,075071[0x000055a8da783c50]  INFO: Betriebssystem: "Arch Linux" 5.8.9-arch2-1 (Kernel 5.8.9-arch2-1)
+2020-09-18 09:31:46,075071[0x000055a8da783c50]  INFO: Architektur:    x86_64
+2020-09-18 09:31:46,075207[0x000055a8da783c50]  INFO: PluginManager: Suche nach Plugins im Verzeichnis: /home/jhoopmann/projects/eric-php-extension/lib
+2020-09-18 09:31:46,078251[0x000055a8da783c50]  INFO: PluginManager: Registriere Plugins... (commonData)
+2020-09-18 09:31:46,078251[0x000055a8da783c50]  INFO: PluginManager: Lese Bibliothek: /home/jhoopmann/projects/eric-php-extension/lib/plugins2/libcommonData.so
+2020-09-18 09:31:46,152903[0x000055a8da783c50]  INFO: load: Die Shared Library /home/jhoopmann/projects/eric-php-extension/lib/plugins2/libcommonData.so wurde geladen.
+2020-09-18 09:31:46,153126[0x000055a8da783c50]  INFO: Plugin registriert: Type=2, Version=32, 2, 2, 0, Fileversion=2020, 7, 12, 0
+2020-09-18 09:31:46,153240[0x000055a8da783c50]  INFO: PluginManager: 1 Plugins sind registriert
+2020-09-18 09:31:46,185622[0x000055a8da783c50]  INFO: ERiCCertManager  Instanz erzeugt
+2020-09-18 09:31:46,185735[0x000055a8da783c50]  INFO: Print-Service wird initialisiert
+2020-09-18 10:44:49,700652[0x00005622f760b290]  INFO: Die ERiC-Instanz wurde mit der Protokolldatei "/home/jhoopmann/projects/eric-php-extension/eric.log" assoziiert
+2020-09-18 10:44:49,700770[0x00005622f760b290]  INFO: Callbackmanager initialisiert
+2020-09-18 10:44:49,700770[0x00005622f760b290]  INFO: ERiC-Instanz "0x5622f760b290" erzeugt
+2020-09-18 10:44:49,700770[0x00005622f760b290]  INFO: Version der ERiC Kernbibliotheken: 32, 2, 2, 0
+2020-09-18 10:44:49,700770[0x00005622f760b290]  INFO: Buildkonfiguration=Release
+2020-09-18 10:44:49,700770[0x00005622f760b290]  INFO: Zielarchitektur=x86-64
+2020-09-18 10:44:49,700770[0x00005622f760b290]  INFO: Betabuild=nein
+2020-09-18 10:44:49,701043[0x00005622f760b290]  INFO: PID=84748
+2020-09-18 10:44:49,701043[0x00005622f760b290]  INFO: Betriebssystem: "Arch Linux" 5.8.9-arch2-1 (Kernel 5.8.9-arch2-1)
+2020-09-18 10:44:49,701043[0x00005622f760b290]  INFO: Architektur:    x86_64
+2020-09-18 10:44:49,701043[0x00005622f760b290]  INFO: PluginManager: Suche nach Plugins im Verzeichnis: /home/jhoopmann/projects/eric-php-extension/lib
+2020-09-18 10:44:49,704687[0x00005622f760b290]  INFO: PluginManager: Registriere Plugins... (commonData)
+2020-09-18 10:44:49,704687[0x00005622f760b290]  INFO: PluginManager: Lese Bibliothek: /home/jhoopmann/projects/eric-php-extension/lib/plugins2/libcommonData.so
+2020-09-18 10:44:49,706557[0x00005622f760b290]  INFO: load: Die Shared Library /home/jhoopmann/projects/eric-php-extension/lib/plugins2/libcommonData.so wurde geladen.
+2020-09-18 10:44:49,706693[0x00005622f760b290]  INFO: Plugin registriert: Type=2, Version=32, 2, 2, 0, Fileversion=2020, 7, 12, 0
+2020-09-18 10:44:49,706693[0x00005622f760b290]  INFO: PluginManager: 1 Plugins sind registriert
+2020-09-18 10:44:49,707078[0x00005622f760b290]  INFO: ERiCCertManager  Instanz erzeugt
+2020-09-18 10:44:49,707078[0x00005622f760b290]  INFO: Print-Service wird initialisiert
