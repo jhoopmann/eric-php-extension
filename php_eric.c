@@ -1,9 +1,4 @@
-#include <dlfcn.h>
-#include "php.h"
-
 #include "php_eric.h"
-#include "include/ericapi.h"
-#include "include/eric_fehlercodes.h"
 
 PHP_MINIT_FUNCTION(eric)
 {
