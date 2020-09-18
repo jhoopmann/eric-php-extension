@@ -18297,3 +18297,21 @@
 2020-09-18 12:05:39,776286[0x000055ca461ecd10]  INFO: PluginManager: 1 Plugins sind registriert
 2020-09-18 12:05:39,776684[0x000055ca461ecd10]  INFO: ERiCCertManager  Instanz erzeugt
 2020-09-18 12:05:39,776684[0x000055ca461ecd10]  INFO: Print-Service wird initialisiert
+2020-09-18 12:23:10,229109[0x00005625e0356d10]  INFO: Die ERiC-Instanz wurde mit der Protokolldatei "/home/jhoopmann/projects/eric-php-extension/eric.log" assoziiert
+2020-09-18 12:23:10,229217[0x00005625e0356d10]  INFO: Callbackmanager initialisiert
+2020-09-18 12:23:10,229217[0x00005625e0356d10]  INFO: ERiC-Instanz "0x5625e0356d10" erzeugt
+2020-09-18 12:23:10,229217[0x00005625e0356d10]  INFO: Version der ERiC Kernbibliotheken: 32, 2, 2, 0
+2020-09-18 12:23:10,229217[0x00005625e0356d10]  INFO: Buildkonfiguration=Release
+2020-09-18 12:23:10,229217[0x00005625e0356d10]  INFO: Zielarchitektur=x86-64
+2020-09-18 12:23:10,229217[0x00005625e0356d10]  INFO: Betabuild=nein
+2020-09-18 12:23:10,229438[0x00005625e0356d10]  INFO: PID=114029
+2020-09-18 12:23:10,229438[0x00005625e0356d10]  INFO: Betriebssystem: "Arch Linux" 5.8.9-arch2-1 (Kernel 5.8.9-arch2-1)
+2020-09-18 12:23:10,229438[0x00005625e0356d10]  INFO: Architektur:    x86_64
+2020-09-18 12:23:10,229438[0x00005625e0356d10]  INFO: PluginManager: Suche nach Plugins im Verzeichnis: /home/jhoopmann/projects/eric-php-extension/lib
+2020-09-18 12:23:10,233277[0x00005625e0356d10]  INFO: PluginManager: Registriere Plugins... (commonData)
+2020-09-18 12:23:10,233277[0x00005625e0356d10]  INFO: PluginManager: Lese Bibliothek: /home/jhoopmann/projects/eric-php-extension/lib/plugins2/libcommonData.so
+2020-09-18 12:23:10,235065[0x00005625e0356d10]  INFO: load: Die Shared Library /home/jhoopmann/projects/eric-php-extension/lib/plugins2/libcommonData.so wurde geladen.
+2020-09-18 12:23:10,235196[0x00005625e0356d10]  INFO: Plugin registriert: Type=2, Version=32, 2, 2, 0, Fileversion=2020, 7, 12, 0
+2020-09-18 12:23:10,235196[0x00005625e0356d10]  INFO: PluginManager: 1 Plugins sind registriert
+2020-09-18 12:23:10,235625[0x00005625e0356d10]  INFO: ERiCCertManager  Instanz erzeugt
+2020-09-18 12:23:10,235625[0x00005625e0356d10]  INFO: Print-Service wird initialisiert

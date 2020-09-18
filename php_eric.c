@@ -82,9 +82,42 @@ PHP_FUNCTION(eric_close)
     RETURN_BOOL(IS_FALSE);
 }
 
+PHP_FUNCTION(eric_transfer)
+{
+    if(lericapi) {
+        char* certPath;
+        int certLength;
+
+        ZEND_PARSE_PARAMETERS_START(1,1)
+            Z_PARAM_STRING(certPath, certLength)
+        ZEND_PARSE_PARAMETERS_END();
+
+        int certRequiresPin = 0;
+
+        if(eric_cert_handle) {
+            pEricCloseHandleToCertificate(eric_cert_handle);
+        }
+        if(pEricGetHandleToCertificate(
+                &eric_cert_handle,
+                certRequiresPin,
+                certPath
+            ) != ERIC_OK
+        ) {
+            RETURN_BOOL(IS_FALSE);
+        }
+
+
+        eric_encryption_params.zertifikatHandle = eric_cert_handle;
+    }
+}
+ZEND_BEGIN_ARG_INFO_EX(eric_transfer_arginfo, 0, 0, 1)
+    ZEND_ARG_INFO(0, eric_certificate_file_path)
+ZEND_END_ARG_INFO()
+
 static zend_function_entry eric_functions[] = {
 	PHP_FE(eric_init, NULL)
     PHP_FE(eric_close, NULL)
+    PHP_FE(eric_transfer, NULL)
     PHP_FE_END
 };
 
