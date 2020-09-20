@@ -31,21 +31,7 @@ extern zend_module_entry eric_module_entry;
 #include "TSRM.h"
 #endif
 
-void *lericapi;
-EricZertifikatHandle eric_cert_handle;
-eric_druck_parameter_t eric_print_params = {
-	.version = 2,
-	.vorschau = 0,
-	.ersteSeite = 0,
-	.duplexDruck = 0,
-	.pdfName = "eric_print.pdf",
-	.fussText = NULL
-};
-eric_verschluesselungs_parameter_t eric_encryption_params = {
-	.version = 2,
-	.pin = "",
-	.zertifikatHandle = NULL
-};
+void *lericapi = NULL;
 
 int (*pEricInitialisiere)(const char* pluginPath, const char* logPath);
 int (*pEricBeende)();
