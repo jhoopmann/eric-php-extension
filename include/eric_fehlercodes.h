@@ -207,6 +207,11 @@ typedef enum eric_fehlercode {
     ERIC_GLOBAL_VORSATZ_UNGUELTIG = 610001051,
 
     /**
+     * [610001053] Auf eine Datei konnte nicht in gewünschter Weise zugegriffen werden. Details stehen im Logile (eric.log)
+     */
+    ERIC_GLOBAL_DATEIZUGRIFF_VERWEIGERT = 610001053,
+
+    /**
      * [610001080] Die übergebene Instanz ist gleich NULL oder bereits freigegeben worden.
      */
     ERIC_GLOBAL_UNGUELTIGE_INSTANZ = 610001080,
@@ -317,7 +322,7 @@ typedef enum eric_fehlercode {
     ERIC_GLOBAL_IBAN_LAENDERCODE_FEHLER = 610001502,
 
     /**
-     * [610001503] Ungültige IBAN: Die angegebene IBAN entspricht nicht dem für das angegebene Land definierten formalen Aufbau der IBAN.
+     * [610001503] Ungültige IBAN: Die angegebene IBAN entspricht nicht dem für das angegebene Land definierten formalen Aufbau der IBAN oder die IBAN ist unzulässig.
      */
     ERIC_GLOBAL_IBAN_LANDESFORMAT_FEHLER = 610001503,
 

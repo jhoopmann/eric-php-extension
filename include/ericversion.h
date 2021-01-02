@@ -11,8 +11,8 @@
  * 
  */
 
-#define ERIC_MAJOR_VERSION  32
+#define ERIC_MAJOR_VERSION  33
 #define ERIC_MINOR_VERSION  2
-#define ERIC_PATCH_VERSION  2
+#define ERIC_PATCH_VERSION  4
 
 #endif
