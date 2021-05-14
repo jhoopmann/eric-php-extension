@@ -313,7 +313,7 @@ PHP_FUNCTION(eric_transfer)
             if(certRequiresPin != 0) {
                 eric_globals.errCode = 5; /* eric decryption cert err */
 
-                //pEricCloseHandleToCertificate(eric_encryption_params.zertifikatHandle);
+                pEricCloseHandleToCertificate(eric_encryption_params.zertifikatHandle);
                 RETURN_BOOL(IS_FALSE);
             }
             pin = "";
@@ -333,7 +333,7 @@ PHP_FUNCTION(eric_transfer)
             dataHandle,
             serverResponseHandle
         );
-        //pEricCloseHandleToCertificate(eric_encryption_params.zertifikatHandle);
+        pEricCloseHandleToCertificate(eric_encryption_params.zertifikatHandle);
 
         int bufLength = pEricRueckgabepufferLaenge(dataHandle) +1;
         const char buf[bufLength];
