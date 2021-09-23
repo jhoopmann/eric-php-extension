@@ -418,7 +418,7 @@ PHP_FUNCTION(eric_get_error)
 }
 
 static zend_function_entry eric_functions[] = {
-	PHP_FE(eric_init, NULL)
+    PHP_FE(eric_init, NULL)
     PHP_FE(eric_close, NULL)
     PHP_FE(eric_get_tax_office_country_numbers, NULL)
     PHP_FE(eric_get_tax_offices_for_country_number, arginfo_eric_get_tax_offices_for_country_number)
